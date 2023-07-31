@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/anime.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Anime Section (Page-2)</title>
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            The<span>One</span>
+        </div>
+        <div class="nav-items">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#">Anime Movie</a></li>
+            <li><a href="#">Bollywood</a></li>
+            <li><a href="#">Hollywood</a></li>
+            <li><a href="#">Netflix</a></li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+
+                // scroll-up button show/hide script
+                if (this.scrollY > 50) {
+                    $('.scroll-up-btn').addClass("show");
+                } else {
+                    $('.scroll-up-btn').removeClass("show");
+                }
+            });
+
+            // slide-up script
+            $('.scroll-up-btn').click(function () {
+                $('html').animate({ scrollTop: 0 });
+                // removing smooth scroll on slide-up button click
+                $('html').css("scrollBehavior", "auto");
+            });
+        });
+    </script>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+    <!-- navbar End -->
+
+    <section id="latest">
+        <h2 class="latest-heading"><strong>Anime Movies</strong></h2>
+        <!-- slider -->
+        <ul id="autoWidth2" class="cs-hidden" style="text-decoration: none;">
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-1.png" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>One Piece: Red</strong>
+                        <p>|Movie|</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-2.jpeg" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Black Clover: Sword of the Wizard King</strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-3.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-4.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-5.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-5.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-5.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- movie section -->
+
+    <div class="movies-heading">
+        <h2><strong> Anime Series</strong></h2>
+    </div>
+
+    <section id="movie-list">
+
+        <!-- box-16 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post16" src="Anime-thumbnails/A-16.jpg" alt="#">
+                <script>$("#post16").click(function () { window.location.href = 'post/post16.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post16.html">
+                Tokyo Revenger (season 1) | 1080p Dual Audio
+            </a>
+        </div>
+        <!-- box-17 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post17" src="Anime-thumbnails/A-17.png" alt="#">
+                <script>$("#post17").click(function () { window.location.href = 'post/post17.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post17.html">
+                Mashle: Magic and Muscles | 1080p Dual Audio
+            </a>
+        </div>
+        <!-- box-18 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post18" src="Anime-thumbnails/A-18.png" alt="#">
+                <script>$("#post18").click(function () { window.location.href = 'post/post18.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post18.html">
+                Dr. Stone | 1080p Dual Audio
+            </a>
+        </div>
+        <!-- box-19 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post19" src="Anime-thumbnails/A-19.png" alt="#">
+                <script>$("#post19").click(function () { window.location.href = 'post/post19.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post19.html">
+                Dragon Ball (Z + Kai + Super + GT + Heroes) | 1080p Dual Audio
+            </a>
+        </div>
+        <!-- box-20 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post20" src="" alt="#">
+                <script>$("#post20").click(function () { window.location.href = 'post/post20.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post20.html">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+        <!-- box-21 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post21" src="" alt="#">
+                <script>$("#post21").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Anime Name
+            </a>
+        </div>
+
+    </section>
+
+    <div class="btns">
+        <a href="index.html">Previous</a>
+        <a href="#">Next</a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2023, All Reserved | ❤️ TheOne for Anime lover</p>
+    </footer>
+
+    <!-- slider script -->
+    <script>
+        $(document).ready(function () {
+            $('#autoWidth,#autoWidth2').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

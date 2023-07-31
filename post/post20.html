@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Dr. Stone | 1080p Dual Audio</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.2s linear;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .header {
+            margin: 0px 20px;
+            border-bottom: 1px solid #000000;
+            margin-bottom: 10px;
+            margin-top: 25px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content {
+            margin: 0px 20px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        h1 {
+            letter-spacing: 2px;
+            font-size: 30px;
+        }
+
+        h2 {
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+
+        h3 {
+            letter-spacing: -1px;
+        }
+
+        p {
+            font-size: 18px;
+            letter-spacing: -1px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 15px;
+            background-color: #1d1d1d;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            color: #ffffff;
+            margin: 10px 0px;
+            padding: 10px 0px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            img {
+                width: 350px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            h1 {
+                letter-spacing: 1px;
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 16px;
+                letter-spacing: -1px;
+            }
+
+        }
+
+        @media (max-width: 425px) {
+            img {
+                width: 300px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            h1 {
+                letter-spacing: 1px;
+                font-size: 25px;
+            }
+
+            .entry-content {
+                margin: 0px 15px
+            }
+
+            p {
+                font-size: 16px;
+                letter-spacing: -1px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            img {
+                width: 290px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            h1 {
+                letter-spacing: 1px;
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+
+            .entry-content {
+                margin: 0px 15px
+            }
+
+            footer p {
+                color: #ffffff;
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 320px) {
+            img {
+                width: 280px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            h1 {
+                letter-spacing: 1px;
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 16px;
+                letter-spacing: -1px;
+            }
+
+            .entry-content {
+                margin: 0px 15px
+            }
+
+            footer p {
+                color: #ffffff;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body style=" padding: 0; background-color: #ffffff; color: #000000; ">
+
+    <!-- navbar start -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            The<span>One</span>
+        </div>
+        <div class="nav-items">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#">Anime Movie</a></li>
+            <li><a href="#">Bollywood</a></li>
+            <li><a href="#">Hollywood</a></li>
+            <li><a href="#">Netflix</a></li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <script>
+        $(document).ready(function(){
+    $(window).scroll(function(){
+        
+        // scroll-up button show/hide script
+        if(this.scrollY > 50){
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+        }
+    });
+
+    // slide-up script
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
+        // removing smooth scroll on slide-up button click
+        $('html').css("scrollBehavior", "auto");
+    });
+});
+    </script>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+    <!-- navbar End -->
+
+    <header class="header"
+        style=" margin: 0px 30px; border-bottom: 1px solid #000000; margin-bottom: 10px;margin-top: 25px; padding-bottom: 20px;">
+        <h1 style="font-size: 30px;" class="entry-title">
+            Dr. Stone | 1080p Dual Audio
+        </h1>
+    </header>
+
+    <div class="entry-content" style=" margin: 0px 20px; background-color: #ffffff; color: #000000; ">
+        <p style="text-align: justify;">
+            <strong>Dr. Stone</strong> Dual Audio (Japanese & English) All Episodes Available in
+            <span><strong>720p</strong></span> &
+            <span><strong>1080p</strong></span>
+            qualities. This Anime WEB Series is based on
+            <strong><span style="color: #ff0000">Animation, Action, Adventure, Comedy, Sci-Fi </span></strong>.
+        </p>
+        <br>
+        <p style="text-align: justify;">
+            <span style="color: green">
+                <strong><a style="color: green" href="#">TheOne.IN</a></strong>
+            </span> is the best online platform for downloading
+            <span style="color: green"><strong><a style="color: green" href="#">Hollywood</a></strong>
+            </span> and<strong><a style="color: green" href="#"><span style="color: green"> Bollywood
+                        Movies</span></a></strong>. We provide direct <strong>G-Drive</strong> download link for fast
+            and secure downloading. Click on the download button below and follow the steps to start download.
+        </p>
+        <br>
+        <h3 style="text-align: center">
+            <span>
+                <strong><strong>Dr. Stone All Episodes in (Japanese & English)</strong>
+                    ~ TheOne.IN</strong></span>
+        </h3>
+        <br>
+        <h3>
+            <strong><span style="color: #000000;">Series Info:</span></strong>
+        </h3>
+        <br>
+        <p>
+            <strong><a style="color: #ff0000" href="https://www.imdb.com/title/tt9679542/" target="_blank"
+                    rel="noopener">
+                    <span style="color: #ff0000">IMDb Rating:- 8.1/10</span></a></strong><br><br>
+            <strong>Series Name:</strong> Dr. Stone<br />
+            <strong>Season:</strong> 1-3<br />
+            <strong>Episode:</strong> 46<br />
+            <strong>Language:</strong>
+            <span style="color: #ff0000"><strong>Japanese & English</strong></span><br />
+            <strong>Subtitle:</strong> YES / English<br />
+            <strong>Released Year:</strong> 2019<br />
+            <strong>written:</strong> Boichi & Riichiro Inagaki<br />
+
+            <strong>Episode Size:</strong> 300MB – Each Episodes<br />
+            <strong>Quality:</strong> 1080p –
+            <span style="color: #ff0000"><strong>WEB-DL</strong></span><br />
+            <strong>Format:</strong> MKV
+        </p>
+        <br>
+        <h3 style="text-align: center">
+            <span style="color: red">Series-SYNOPSIS/PLOT:</span>
+        </h3>
+        <br>
+        <p style="text-align: justify;">
+            Awakened into a world where humanity has been petrified, scientific genius Senku and his brawny friend Taiju
+            use their skills to rebuild civilization.One fateful day, all of humanity was petrified by a blinding flash of light. After several millennia, high
+            schooler Taiju awakens and finds himself lost in a world of statues. However, he's not alone. His
+            science-loving friend Senku's been up and running for a few months and he's got a grand plan in mind, to
+            kickstart civilization with the power of science.</p>
+        <br>
+        <h2 style="text-align: center">
+            <span style="color: #000000">Screenshots: (Must See Before Downloading)…</span>
+        </h2>
+        <br>
+        <p
+            style="text-align: center;display: flex; flex-wrap: wrap;justify-content:center; row-gap: 5px; column-gap:3px;">
+            <img width="500px" height="auto" src="https://i.pinimg.com/564x/8e/0a/69/8e0a6915991937246d98e11110f19497.jpg">
+            <img width="500px" height="auto" src="https://i.pinimg.com/564x/b0/d0/6a/b0d06ab3cee70865ab15d5242fa2a323.jpg" />
+            <img width="500px" height="auto" src="https://i.pinimg.com/564x/68/f6/e4/68f6e49b003103a89acdad222b246937.jpg" />
+            <img width="500px" height="auto" src="https://i.pinimg.com/564x/51/79/84/517984a6b27e7555f354e8d2fed50b71.jpg" />
+            <img width="500px" height="auto" src="https://i.pinimg.com/564x/f4/49/5c/f4495cbb4b5dc36e3fcfb05c6cb34d0e.jpg" />
+            <img width="500px" height="auto" src="https://i.pinimg.com/564x/7a/b5/56/7ab5563333001fc4d908346060f9cb3c.jpg" />
+        </p>
+        <br>
+        <h2 style="text-align: center ;">
+            <strong><span style="text-align: justify; color: #000000">Dr. Stone (Season 1-3)<span
+                        style="color: #ff6200">
+                        Single
+                        Episodes</span> 1080p
+                    [300MB/E]</span></strong>
+        </h2>
+        <br>
+        <p style="text-align: center">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn"
+                    style="margin: 10px; font-weight: 600; width: 100px; height: 40px; border-radius: 5px; border: none; outline: none; color: #fff; background-color: #3963f0; font-size: 1rem;">
+                    Season 1
+                </button>
+            </a>
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn"
+                    style="margin: 10px; font-weight: 600; width: 100px; height: 40px; border-radius: 5px; border: none; outline: none; color: #fff; background-color: #3963f0; font-size: 1rem;">
+                    Season 2
+                </button>
+            </a>
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn"
+                    style="margin: 10px; font-weight: 600; width: 100px; height: 40px; border-radius: 5px; border: none; outline: none; color: #fff; background-color: #3963f0; font-size: 1rem;">
+                    Season 3
+                </button>
+            </a>
+        </p>
+        <br>
+        <p style="text-align: center">
+            <span style="font-size: 13pt">
+                <strong>
+                    <span style="color: #ff0000">
+                        **
+                        <span>
+                            More Episodes Will Be Added When They Are Released…
+                        </span>
+                        **
+                    </span>
+                </strong>
+            </span>
+        </p>
+        <br>
+        <p style="text-align: center">
+            <span style="font-size: 14pt"><strong>
+                    <span style="color: #ff0000">
+                        **
+                        <span>Note: More Episodes Will Be Added Weekly…</span>
+                        **
+                    </span></strong>
+            </span>
+        </p>
+        <br>
+    </div>
+    <footer>
+        <p>Copyright © 2023, All Reserved | ❤️ TheOne for Anime lover</p>
+    </footer>
+</body>
+
+</html>

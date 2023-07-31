@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/anime.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Anime Section (page-1)</title>
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            The<span>One</span>
+        </div>
+        <div class="nav-items">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#">Anime Movie</a></li>
+            <li><a href="#">Bollywood</a></li>
+            <li><a href="#">Hollywood</a></li>
+            <li><a href="#">Netflix</a></li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+
+                // scroll-up button show/hide script
+                if (this.scrollY > 50) {
+                    $('.scroll-up-btn').addClass("show");
+                } else {
+                    $('.scroll-up-btn').removeClass("show");
+                }
+            });
+
+            // slide-up script
+            $('.scroll-up-btn').click(function () {
+                $('html').animate({ scrollTop: 0 });
+                // removing smooth scroll on slide-up button click
+                $('html').css("scrollBehavior", "auto");
+            });
+        });
+    </script>
+
+    <!-- navbar End -->
+
+    <section id="latest">
+        <h2 class="latest-heading"><strong>Anime Movies</strong></h2>
+        <!-- slider -->
+        <ul id="autoWidth2" class="cs-hidden" style="text-decoration: none;">
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-1.png" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>One Piece: Red</strong>
+                        <p>|Movie|</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-2.jpeg" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Black Clover: Sword of the Wizard King</strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-3.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-4.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-5.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-5.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Anime-thumbnails/AM-5.jpeg" alt="movie">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- movie section -->
+
+    <div class="movie-heading">
+        <h2><strong> Anime Series</strong></h2>
+    </div>
+
+    <section id="movie-list">
+
+        <!-- box-1   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <div class="quality">1080p</div>
+                <img id="post1" src="Anime-thumbnails/A-1.jpg">
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post1.html"> One Piece - 1080p Dual Audio | (Episode Ongoing)</a>
+            <script>$("#post1").click(function () { window.location.href = 'post/post1.html' });</script>
+        </div>
+
+        <!-- box-2   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post2" src="Anime-thumbnails/A-2.png" alt="#">
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post2.html">Demon Slayer: Kimetsu no Yaiba | 1080p Multi Audio</a>
+            <script>$("#post2").click(function () { window.location.href = 'post/post2.html' });</script>
+        </div>
+
+        <!-- box-3   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post3" src="Anime-thumbnails/A-3.png" alt="#">
+                <script>$("#post3").click(function () { window.location.href = 'post/post3.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                My Hero Academia | 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-4   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post4" src="https://i.pinimg.com/564x/7b/57/da/7b57da308bc3d222089e4c3ca2ce96aa.jpg" alt="#">
+                <script>$("#post4").click(function () { window.location.href = 'post/post4.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post4.html">
+                Demon Slayer: Kimetsu no Yaiba – Entertainment District Arc | 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-5   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post5" src="Anime-thumbnails/A-5.jpeg" alt="#">
+                <script>$("#post5").click(function () { window.location.href = '' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="#">
+                Demon Slayer: Kimetsu no Yaiba - Swordsmith Village Arc | 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-6   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post6" src="Anime-thumbnails/A-6.jpeg" alt="#">
+                <script>$("#post6").click(function () { window.location.href = 'post/post6.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post6.html">
+                High School DXD (Seasons 1-4 + OVAs) [UNCENSORED] 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-7   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post7" src="Anime-thumbnails/A-7.jpg" alt="#">
+                <script>$("#post7").click(function () { window.location.href = 'post/post7.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post7.html">
+                Chainsaw Man (Season 1) 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-8   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post8" src="Anime-thumbnails/A-8.jpg" alt="#">
+                <script>$("#post8").click(function () { window.location.href = 'post/post8.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post8.html">
+                Jujutsu Kaisen (Season 1) 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-9   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post9" src="Anime-thumbnails/A-9.jpg" alt="#">
+                <script>$("#post9").click(function () { window.location.href = 'post/post9.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post9.html">
+                Naruto (Season 1-7) 1080p Dual Audio
+            </a>
+
+        </div>
+
+        <!-- box-10   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post10" src="Anime-thumbnails/A-10.jpg" alt="#">
+                <script>$("#post10").click(function () { window.location.href = 'post/post10.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post10.html">
+                Naruto Shippuden (Season 1-21) 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-11 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post11" src="Anime-thumbnails/A-11.jpeg" alt="#">
+                <script>$("#post11").click(function () { window.location.href = 'post/post11.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post11.html">
+                Black Clover (Season 1-4) | 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-12 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post12" src="Anime-thumbnails/A-12.jpg" alt="#">
+                <script>$("#post12").click(function () { window.location.href = 'post/post12.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post12.html">
+                Bleach (season 1-16) 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-13 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post13" src="Anime-thumbnails/A-13.jpg" alt="#">
+                <script>$("#post13").click(function () { window.location.href = 'post/post13.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post13.html">
+                Bleach: Thousand Year Blood War (season 1-2) | 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-14 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post14" src="Anime-thumbnails/A-14.jpeg" alt="#">
+                <script>$("#post14").click(function () { window.location.href = 'post/post14.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post14.html">
+                Attack on Titan (Shingeki no Kyojin) (Seasons 1-4) | 1080p Dual Audio
+            </a>
+        </div>
+
+        <!-- box-15 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post15" src="Anime-thumbnails/A-15.png" alt="#">
+                <script>$("#post15").click(function () { window.location.href = 'post/post15.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="post/post15.html">
+                Akame ga Kill! | 1080p Dual Audio
+            </a>
+        </div>
+
+
+
+    </section>
+
+    <div class="btns">
+        <a href="#">Previous</a>
+        <a href="Anime2.html">Next</a>
+    </div>
+
+    <footer>
+        <!-- <div class="help">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Request Us</a></li>
+        </div> -->
+        <p>Copyright © 2023, All Reserved | ❤️ TheOne for Anime lover</p>
+    </footer>
+
+    <!-- slider script -->
+    <script>
+        $(document).ready(function () {
+            $('#autoWidth,#autoWidth2').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
