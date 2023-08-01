@@ -9,11 +9,6 @@
 html{
   scroll-behavior:smooth;
 }
-/* body{
-  background: #f2f2f2;
-} */
-
-/* navbar css start */
 
 .scroll-up-btn{
   position: fixed;
@@ -25,7 +20,7 @@ html{
   text-align: center;
   line-height: 45px;
   color: #fff;
-  z-index: 99;
+  z-index: 100;
   font-size: 30px;
   border-radius: 6px;
   border-bottom-width: 2px;
@@ -42,25 +37,20 @@ html{
 .scroll-up-btn:hover{
   filter: brightness(90%);
 }
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-body{
-  background: #f2f2f2;
-}
+
+/* navbar css start */
+
 nav{
   background: #171c24;
+  position: sticky;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 70px;
   padding: 0 100px;
+  z-index: 1000;
+  top: 0;
 }
 nav .logo{
   color: #fff;
@@ -148,11 +138,11 @@ nav .search-icon{
   }
   nav .nav-items{
     position: fixed;
-    z-index: 99;
+    z-index: 100;
     top: 70px;
     width: 100%;
     left: -100%;
-    height: 100%;
+    height: 70%;
     padding: 10px 50px 0 50px;
     text-align: center;
     background: #14181f;

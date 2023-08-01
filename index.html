@@ -18,36 +18,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Hollywood Section (page-1)</title>
     <style>
-        .btn{
-            margin: 10px 10px;
+        .btn {
+            margin: 10px 5px;
             font-weight: 600;
-            width: 150px;
+            width: 120px;
             height: 40px;
             border-radius: 5px;
             border: none;
             outline: none;
             color: #fff;
-            background-color: #3963f0;
-            font-size: 1rem;
-        }
-
-        .movie-btns a {
-            width: 200px;
-            height: 40px;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-            color: #fff;
-            background-color: #3963f0;
-            margin: 20px 10px 10px 10px;
-            display: flex;
-            justify-content: center;
+            background-color: #171c24;
+            font-size: 12px;
             align-items: center;
-            font-size: 1rem;
+            text-align: center;
         }
 
-        .movie-btns a:hover {
-            background-color: #284fd1;
+        .btn a {
+            align-items: center;
+            text-align: center;
+            font-weight: 600;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .btn a:hover {
+            color: #ff3d00;
         }
     </style>
 </head>
@@ -79,6 +74,7 @@
             <button type="submit" class="fas fa-search"></button>
         </form>
     </nav>
+    <br>
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
@@ -132,26 +128,32 @@
         <a href="#">Marvel Cinematic</a>
         <a href="#">Movies Collection</a>
     </div> -->
-    <p style="text-align: center;margin-top: 15px;">
-        <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-            <button class="btn">
-                Anime Movie
-            </button>
-        </a>
-        <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-            <button class="btn">
-                Marvel Collection
-            </button>
-        </a>
-        <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-            <button class="btn">
-                Movies Collection
-            </button>
-        </a>
-    </p>
+    <!-- <p style="text-align: center;margin-top: 10px;"> -->
+        <div style=" align-items: center; display: flex; justify-content: center; flex-wrap: wrap;">
+        <button class="btn">
+            <a href="#">Anime Movie</a>
+        </button>
 
-    <section id="latest">
-        <h2 class="latest-heading"><strong>Anime Movies</strong></h2>
+        <button class="btn">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                Marvel Collection
+            </a>
+        </button>
+        <button class="btn">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                DC Collection
+            </a>
+        </button>
+        <button class="btn">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                Movies Collection
+            </a>
+        </button>
+    </div>
+    <!-- </p> -->
+
+    <section id="latest" style="padding: 10px 0px 0px 0px;">
+        <h2 class="latest-heading" style="margin:10px 20px 20px 20px;"><strong>Latest Movies</strong></h2>
         <!-- slider -->
         <ul id="autoWidth2" class="cs-hidden" style="text-decoration: none;">
             <!-- box1 -->
@@ -159,7 +161,7 @@
                 <div class="latest-box">
                     <!-- img -->
                     <div class="latest-b-img">
-                        <img src="" alt="">
+                        <img src="Movie-thumbnails/MP-1.jpg" alt="">
                     </div>
                     <!-- text -->
                     <div class="latest-b-text">
@@ -173,7 +175,63 @@
                 <div class="latest-box">
                     <!-- img -->
                     <div class="latest-b-img">
-                        <img src="" alt="">
+                        <img src="Movie-thumbnails/MP-2.jpg" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Movie-thumbnails/MP-3.jpg" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Movie-thumbnails/MP-4.jpg" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Movie-thumbnails/MP-5.jpg" alt="">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong></strong>
+                        <p>Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- box1 -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="Movie-thumbnails/MP-6.jpg" alt="">
                     </div>
                     <!-- text -->
                     <div class="latest-b-text">
