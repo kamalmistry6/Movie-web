@@ -18,8 +18,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Hollywood Section (page-1)</title>
     <style>
+        li {
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        #bulk {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
         .btn {
-            margin: 10px 5px;
+            margin: 5px 5px;
             font-weight: 600;
             width: 120px;
             height: 40px;
@@ -44,11 +57,19 @@
         .btn a:hover {
             color: #ff3d00;
         }
+
+        .btn li a:hover {
+            color: #ff3d00;
+        }
+
+        .btn li:hover {
+            transform: scale(1);
+            transition: 0.3s;
+        }
     </style>
 </head>
 
 <body>
-
     <!-- navbar start -->
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
@@ -74,7 +95,7 @@
             <button type="submit" class="fas fa-search"></button>
         </form>
     </nav>
-    <br>
+
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
@@ -123,126 +144,45 @@
     </script>
     <!-- navbar End -->
 
-    <!-- <div class="movie-btns">
-        <a href="#">Anime Movie</a>
-        <a href="#">Marvel Cinematic</a>
-        <a href="#">Movies Collection</a>
-    </div> -->
+
     <!-- <p style="text-align: center;margin-top: 10px;"> -->
-        <div style=" align-items: center; display: flex; justify-content: center; flex-wrap: wrap;">
+    <div id="bulk">
         <button class="btn">
-            <a href="#">Anime Movie</a>
+            <li><a href="#">Anime Movie</a></li>
         </button>
 
         <button class="btn">
-            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-                Marvel Collection
-            </a>
+        <li><a href="#">Marvel Collection</a></li>
         </button>
         <button class="btn">
-            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-                DC Collection
-            </a>
+            <li><a href="#">DC Collection</a></li>
         </button>
         <button class="btn">
-            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
-                Movies Collection
-            </a>
+            <li><a href="#">Movies Collection</a></li>
         </button>
     </div>
     <!-- </p> -->
 
-    <section id="latest" style="padding: 10px 0px 0px 0px;">
+    <!-- <section id="latest" style="padding: 10px 0px 0px 0px;">
         <h2 class="latest-heading" style="margin:10px 20px 20px 20px;"><strong>Latest Movies</strong></h2>
-        <!-- slider -->
+        
         <ul id="autoWidth2" class="cs-hidden" style="text-decoration: none;">
-            <!-- box1 -->
+            
             <li class="item-a">
                 <div class="latest-box">
-                    <!-- img -->
+                    
                     <div class="latest-b-img">
                         <img src="Movie-thumbnails/MP-1.jpg" alt="">
                     </div>
-                    <!-- text -->
+                    
                     <div class="latest-b-text">
                         <strong></strong>
                         <p>Movie</p>
                     </div>
                 </div>
             </li>
-            <!-- box1 -->
-            <li class="item-a">
-                <div class="latest-box">
-                    <!-- img -->
-                    <div class="latest-b-img">
-                        <img src="Movie-thumbnails/MP-2.jpg" alt="">
-                    </div>
-                    <!-- text -->
-                    <div class="latest-b-text">
-                        <strong></strong>
-                        <p>Movie</p>
-                    </div>
-                </div>
-            </li>
-            <!-- box1 -->
-            <li class="item-a">
-                <div class="latest-box">
-                    <!-- img -->
-                    <div class="latest-b-img">
-                        <img src="Movie-thumbnails/MP-3.jpg" alt="">
-                    </div>
-                    <!-- text -->
-                    <div class="latest-b-text">
-                        <strong></strong>
-                        <p>Movie</p>
-                    </div>
-                </div>
-            </li>
-            <!-- box1 -->
-            <li class="item-a">
-                <div class="latest-box">
-                    <!-- img -->
-                    <div class="latest-b-img">
-                        <img src="Movie-thumbnails/MP-4.jpg" alt="">
-                    </div>
-                    <!-- text -->
-                    <div class="latest-b-text">
-                        <strong></strong>
-                        <p>Movie</p>
-                    </div>
-                </div>
-            </li>
-            <!-- box1 -->
-            <li class="item-a">
-                <div class="latest-box">
-                    <!-- img -->
-                    <div class="latest-b-img">
-                        <img src="Movie-thumbnails/MP-5.jpg" alt="">
-                    </div>
-                    <!-- text -->
-                    <div class="latest-b-text">
-                        <strong></strong>
-                        <p>Movie</p>
-                    </div>
-                </div>
-            </li>
-            <!-- box1 -->
-            <li class="item-a">
-                <div class="latest-box">
-                    <!-- img -->
-                    <div class="latest-b-img">
-                        <img src="Movie-thumbnails/MP-6.jpg" alt="">
-                    </div>
-                    <!-- text -->
-                    <div class="latest-b-text">
-                        <strong></strong>
-                        <p>Movie</p>
-                    </div>
-                </div>
-            </li>
-
         </ul>
-    </section>
+    </section> -->
 
     <!-- movie section -->
 
@@ -256,33 +196,33 @@
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post1" src="">
+                <img id="post1" src="Movie-thumbnails/M-1.jpg">
+                <script>$("#post1").click(function () { window.location.href = 'movie-post/post1.html' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href=""></a>
-            <script>$("#post1").click(function () { window.location.href = 'post/post1.html' });</script>
+            <a id="txt" href="movie-post/post1.html">Inception (2014) Dual Audio {Hindi-English} 480p | 720p | 1080p</a>
         </div>
 
         <!-- box-2   -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post2" src="#" alt="#">
+                <img id="post2" src="Movie-thumbnails/M-2.png" alt="#">
+                <script>$("#post2").click(function () { window.location.href = 'movie-post/post2.html' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post2").click(function () { window.location.href = '' });</script>
+            <a id="txt" href="movie-post/post2.html">Interstellar (2014) Dual Audio {Hindi-English} 480p | 720p | 1080p</a>
         </div>
 
         <!-- box-3 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post3" src="#" alt="#">
+                <img id="post3" src="Movie-thumbnails/M-3.png" alt="#">
+                <script>$("#post3").click(function () { window.location.href = 'movie-post/post3.html' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post3").click(function () { window.location.href = '' });</script>
+            <a id="txt" href="movie-post/post3.html">Download Top Gun: Maverick (2022) iMAX BluRay Dual Audio {Hindi-English} 480p | 720p | 1080p | 2160p 4K</a>
         </div>
 
         <!-- box-4 -->

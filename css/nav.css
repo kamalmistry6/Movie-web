@@ -9,7 +9,9 @@
 html{
   scroll-behavior:smooth;
 }
-
+/* body{
+  background: #f2f2f2;
+} */
 .scroll-up-btn{
   position: fixed;
   height: 45px;
@@ -37,31 +39,42 @@ html{
 .scroll-up-btn:hover{
   filter: brightness(90%);
 }
-
 /* navbar css start */
-
 nav{
   background: #171c24;
-  position: sticky;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 70px;
   padding: 0 100px;
-  z-index: 1000;
+  position: sticky;
   top: 0;
+  z-index: 100;
 }
 nav .logo{
+  cursor: pointer;
   color: #fff;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
+}
+nav .logo span{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+nav .logo span:hover{
+  color: #ff3d00;
+}
+.logo:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
 }
 nav .nav-items{
   display: flex;
   flex: 1;
   padding: 0 0 0 40px;
+  justify-content: center;
 }
 nav .nav-items li{
   list-style: none;
@@ -75,6 +88,10 @@ nav .nav-items li a{
 }
 nav .nav-items li a:hover{
   color: #ff3d00;
+}
+nav .nav-items li:hover {
+  transform: scale(0.9);
+  transition: 0.3s;
 }
 nav form{
   display: flex;
@@ -123,6 +140,10 @@ nav .cancel-icon,
 nav .search-icon{
   display: none;
 }
+/* navbar css End */
+
+
+
 @media (max-width: 1245px) {
   nav{
     padding: 0 50px;
@@ -138,11 +159,11 @@ nav .search-icon{
   }
   nav .nav-items{
     position: fixed;
-    z-index: 100;
+    z-index: 99;
     top: 70px;
     width: 100%;
     left: -100%;
-    height: 70%;
+    /* height: 100%; */
     padding: 10px 50px 0 50px;
     text-align: center;
     background: #14181f;
@@ -212,28 +233,7 @@ nav .search-icon{
     display: block;
   }
 }
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-.content header{
-  font-size: 30px;
-  font-weight: 700;
-}
-.content .text{
-  font-size: 30px;
-  font-weight: 700;
-}
-.space{
-  margin: 10px 0;
-}
-nav .logo.space{
-  color: red;
-  padding: 0 5px 0 0;
-}
+
 @media (max-width: 980px){
   nav .menu-icon,
   nav .cancel-icon,
@@ -251,21 +251,4 @@ nav .logo.space{
     margin: 0 10px;
     font-size: 16px;
   }
-}
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.content header{
-  font-size: 30px;
-  font-weight: 700;
-}
-.content .text{
-  font-size: 30px;
-  font-weight: 700;
-}
-.content .space{
-  margin: 10px 0;
 }
