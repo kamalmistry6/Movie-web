@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Ant-Man and the Wasp: Quantumania (2023)</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.5;
+            letter-spacing: 0;
+            /* font-size: 15px; */
+            text-transform: none;
+            text-decoration: none;
+            font-style: normal;
+        }
+
+        .header {
+            margin: 0px 20px;
+            border-bottom: 1px solid #000000;
+            margin-bottom: 10px;
+            margin-top: 25px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content {
+            margin: 0px 20px;
+            background-color: #ffffff;
+            color: #000000;
+            border-bottom: 1px solid black;
+        }
+
+        .exit-content {
+            margin: 0px 20px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        h1 {
+            font-size: 30px !important;
+        }
+
+        h2 {
+            font-size: 22px !important;
+        }
+
+        h3 {
+            font-size: 19px !important;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 15px;
+            background-color: #1d1d1d;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            color: #ffffff;
+            margin: 10px 0px;
+            padding: 10px 0px;
+            font-size: 0.9rem;
+            text-align: center;
+            align-items: center;
+        }
+
+        .btn {
+            margin: 10px;
+            font-weight: 600;
+            width: 140px;
+            height: 40px;
+            border-radius: 5px;
+            font-size: 12px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: #3963f0;
+        }
+
+        @media (max-width: 1100px) {
+            img {
+                width: 390px;
+                height: auto;
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 768px) {
+            img {
+                width: 350px;
+                height: auto;
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 425px) {
+            img {
+                width: 300px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            .entry-content {
+                margin: 0px 15px
+            }
+        }
+
+        @media (max-width: 375px) {
+            img {
+                width: 290px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            .entry-content {
+                margin: 0px 15px
+            }
+
+            footer p {
+                color: #ffffff;
+                font-size: 12px;
+                text-align: center;
+            }
+
+            .btn {
+                margin: 10px;
+                font-weight: 600;
+                width: 115px;
+                height: 40px;
+                font-size: 12px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                color: #fff;
+                background-color: #3963f0;
+            }
+        }
+
+        @media (max-width: 320px) {
+            img {
+                width: 280px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            .entry-content {
+                margin: 0px 15px
+            }
+        }
+    </style>
+</head>
+
+<body style=" padding: 0; background-color: #ffffff; color: #000000; ">
+
+    <!-- navbar start -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            The<span>One</span>
+        </div>
+        <div class="nav-items">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#">Anime Movie</a></li>
+            <li><a href="#">Bollywood</a></li>
+            <li><a href="#">Hollywood</a></li>
+            <li><a href="#">Netflix</a></li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+
+                // scroll-up button show/hide script
+                if (this.scrollY > 50) {
+                    $('.scroll-up-btn').addClass("show");
+                } else {
+                    $('.scroll-up-btn').removeClass("show");
+                }
+            });
+
+            // slide-up script
+            $('.scroll-up-btn').click(function () {
+                $('html').animate({ scrollTop: 0 });
+                // removing smooth scroll on slide-up button click
+                $('html').css("scrollBehavior", "auto");
+            });
+        });
+    </script>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+    <!-- navbar End -->
+
+    <header class="header">
+        <h1 class="entry-title">
+            Ant-Man and the Wasp: Quantumania (2023) iMAX – BluRay Dual Audio [ORG 5.1 Hindi + English 480p | 720p |
+            1080p | 2160p 4k HDR
+        </h1>
+    </header>
+
+    <div class="entry-content">
+        <p style="text-align: justify;">
+            Download <strong>Ant-Man and the Wasp: Quantumania</strong> (2023) iMAX – BluRay Full Movie (Hindi-English)
+            <strong><span style="color:#6601b3">480p</span></strong> & <strong><span
+                    style="color:#6601b3">720p</span></strong> & <strong><span
+                    style="color:#6601b3">1080p</span></strong> & <strong><span style="color:#6601b3">2160p
+                    4K</span></strong> Qualities. This is one of the best movie based on
+            <strong><span style="color: #ffbf0e">Action, Adventure, Comedy.
+                    Drama</span></strong>. This Series is Available in
+            <strong><span style="color: #ff0000">Hindi Dubbed [ORG 5.1 Audio].</span></strong>
+        </p>
+        <br>
+        <p style="text-align: justify;">
+            <span style="color: green">
+                <strong><a style="color: green" href="#">TheOne.IN</a></strong></span> is the best online platform for
+            downloading <span style="color: green"><strong><a style="color: green" href="#">Hollywood</a></strong>
+            </span> and <strong><a style="color: green" href="#"><span style="color: green">Bollywood
+                        Movies</span></a></strong>. We provide direct <strong>G-Drive</strong> download link for fast
+            and secure downloading. Click on the download button below and follow the steps to start download.
+        </p>
+        <br>
+        <h2 style="text-align: center">
+            <span style="color: #2600ff;">
+                <strong>Download Ant-Man 3: Quantumania (2023) Hindi Dubbed 480p, 720p & 1080p – 2160p 4K ~
+                    TheOne.IN</strong></span>
+        </h2>
+        <br>
+        <h3>
+            <strong><span style="color: #000000;">Movie Info:</span></strong>
+        </h3>
+        <br>
+        <p>
+            <strong><a style="color: #ff0000"
+                    href="https://www.imdb.com/title/tt6791350/?ref_=nv_sr_srsg_1_tt_6_nm_1_q_Guardians%2520of%2520the%2520Galaxy%25203%2520"
+                    target="_blank" rel="noopener">
+                    <span style="color: #ff0000">IMDb Rating:- 6.3/10</span></a></strong> <br>
+            <strong>Movie Name:</strong> Ant-Man and the Wasp: Quantumania<br />
+            <strong>Release Year:</strong> 2023<br />
+            <strong>Language:</strong><span style="color: #ff0000"><strong> Hindi DD5.1 + English [Dual Audio
+                    Movie]</strong></span><br />
+            <strong>Subtitle:</strong> YES / English<br />
+            <strong>Size:</strong> 450MB || 1.4GB || 3GB || 5.3GB<br />
+            <strong>Quality:</strong> 480p || 720p || 1080p || 2160p 4K –
+            <span style="color: #ff0000"><strong>iMAX + BluRay</strong></span><br />
+            <strong>Format:</strong> MKV
+        </p>
+        <br>
+        <h3 style="text-align: center">
+            <span style="color: #2600ff">Series-SYNOPSIS/PLOT:</span>
+        </h3>
+        <br>
+        <p style="text-align: justify;">
+            Watch Ant-Man and the Wasp: Quantumania (2023) Full Movie in Hindi – English Online : Scott Lang and Hope
+            Van Dyne, along with Hank Pym and Janet Van Dyne, explore the Quantum Realm, where they interact with
+            strange creatures and embark on an adventure that goes beyond the limits of what they thought was possible.
+        </p>
+        <br>
+        <h2 style="text-align: center">
+            <span style="color: #2600ff">Screenshots: (Must See Before Downloading)…</span>
+        </h2>
+        <br>
+        <p
+            style="text-align: center;display: flex; flex-wrap: wrap;justify-content:center; row-gap: 5px; column-gap:3px;">
+            <img width="600px" height="auto" src="https://imgbb.ink/ib/lEU8tY9Og8cfIGL_1684306465.png" />
+            <img width="600px" height="auto" src="https://imgbb.ink/ib/KlZfk1tDTdthgOu_1684306466.png" />
+            <img width="600px" height="auto" src="https://imgbb.ink/ib/lmWTXmxMDneGXLG_1684306466.png" />
+            <img width="600px" height="auto" src="https://imgbb.ink/ib/AMZGci51RJirWGm_1684306466.png" />
+            <img width="600px" height="auto" src="https://imgbb.ink/ib/SmtQyMWuC2VcsMd_1681750142.png" />
+            <img width="600px" height="auto" src="https://imgbb.ink/ib/kqNa0FjHeLBfp1E_1684306466.png" />
+        </p>
+        <br>
+        <h3 style="text-align: center; font-weight: 700;">
+            <strong><span style="color: #000000">Ant-Man and the Wasp: Quantumania (2023) <span
+                        style="color: #ff6200">[ORG 5.1 Hindi + English]</span> 480p BluRay x264 [450MB]</span></strong>
+        </h3>
+        <p style="text-align: center">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn ">
+                    Download Now
+                </button>
+            </a>
+        </p>
+        <br>
+        <h3 style="text-align: center; font-weight: 700;">
+            <strong><span style="color: #000000">Ant-Man and the Wasp: Quantumania (2023) <span
+                        style="color: #ff6200">[ORG 5.1 Hindi + English]</span> 720p BluRay x264 [1.5GB]</span></strong>
+        </h3>
+        <p style="text-align: center">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn ">
+                    Download Now
+                </button>
+            </a>
+        </p>
+        <br>
+        <h3 style="text-align: center; font-weight: 700;">
+            <strong><span style="color: #000000">Ant-Man and the Wasp: Quantumania (2023) <span
+                        style="color: #ff6200">[ORG 5.1 Hindi + English]</span> 1080p BluRay x264
+                    [2.7GB]</span></strong>
+        </h3>
+        <p style="text-align: center">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn ">
+                    Download Now
+                </button>
+            </a>
+        </p>
+        <br>
+        <h3 style="text-align: center; font-weight: 700;">
+            <strong><span style="color: #000000">Ant-Man and the Wasp: Quantumania (2023) <span
+                        style="color: #ff6200">[ORG 5.1 Hindi + English]</span> 1080p BluRay x264 [4GB]</span></strong>
+        </h3>
+        <p style="text-align: center">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn ">
+                    Download Now
+                </button>
+            </a>
+        </p>
+        <br>
+        <h2 style="text-align: center"><strong><span style="color: #2600ff">** * 60FPS and 2160p [4-K] HDR + SDR x265 –
+                    x264 Lovers * **</span></strong></h2>
+        <br>
+        <h3 style="text-align: center; font-weight: 700;">
+            <strong><span style="color: #000000">Ant-Man and the Wasp: Quantumania (2023) <span
+                        style="color: #ff6200">[Hindi HS DDP 5.1 192kbps + English 6CH] </span> 2160p 10bit HDR BluRay
+                    HEVC x265 [5.3GB]</span></strong>
+        </h3>
+        <p style="text-align: center">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn ">
+                    Download Now
+                </button>
+            </a>
+        </p>
+        <br>
+        <h3 style="text-align: center; font-weight: 700;">
+            <strong><span style="color: #000000">Ant-Man and the Wasp: Quantumania (2023) <span
+                        style="color: #ff6200">[Hindi HS DDP 5.1 192kbps + English 6CH] </span> 2160p SDR 4K DSNP 10bit
+                    HEVC x265 [18GB]</span></strong>
+        </h3>
+        <p style="text-align: center">
+            <a href="#" target="_blank" rel="nofollow noopener noreferrer">
+                <button class="btn ">
+                    Download Now
+                </button>
+            </a>
+        </p>
+        <br>
+    </div>
+    <br>
+    <div class="exit-content">
+        <h2 style="text-align: center; font-weight: 700;">Winding Up ❤️</h2>
+
+        <p style="text-align: center; text-align: justify; margin: 10px 0px;">Thank You For Visiting <strong><span
+                    style="color: green">TheOne.NL</span></strong> The Prefect Spot For HD Dual Audio (Hindi-English)
+            Movies & TV Series
+            Download. So Please Keep Downloading & Keep Sharing. Enjoy!</p>
+    </div>
+    <footer>
+        <p>Copyright © 2023, All Reserved | ❤️ TheOne for Movie lover</p>
+    </footer>
+</body>
+
+</html>

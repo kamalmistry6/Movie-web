@@ -145,17 +145,16 @@ a {
   text-align: center;
   display: block;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 13px;
   display: -webkit-box;
   max-width: 80%;
   height: 90px;
   text-align: justify;
-  /* -webkit-line-clamp: vertical; */
+  -webkit-line-clamp: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #000000;
   margin: 10px;
-  /* border-top: 3px solid black; */
 }
 
 .movie-box:hover {

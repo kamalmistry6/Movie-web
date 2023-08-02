@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/marvel.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>MCU Section (page-1)</title>
+    <style>
+        li {
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        #img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            #img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            The<span>One</span>
+        </div>
+        <div class="nav-items">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#">Web Seres</a></li>
+            <li><a href="Anime1.html">Anime</a></li>
+            <li><a href="#">Netflix</a></li>
+            <li><a href="#">Request us🖤</a></li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+
+                // scroll-up button show/hide script
+                if (this.scrollY > 50) {
+                    $('.scroll-up-btn').addClass("show");
+                } else {
+                    $('.scroll-up-btn').removeClass("show");
+                }
+            });
+
+            // slide-up script
+            $('.scroll-up-btn').click(function () {
+                $('html').animate({ scrollTop: 0 });
+                // removing smooth scroll on slide-up button click
+                $('html').css("scrollBehavior", "auto");
+            });
+        });
+    </script>
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+        const form = document.querySelector("form");
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            searchBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        searchBtn.onclick = () => {
+            form.classList.add("active");
+            searchBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+    </script>
+    <!-- navbar End -->
+
+
+    <p style="text-align: center;margin-top: 5px;">
+        <img id="img" src="m-banner.jpeg" alt="">
+    </p>
+    <p style=" margin: 5px 10px; font-size: 12px; font-weight: 700;">26 post</p>
+
+    <!-- movie section -->
+
+    <div class="movie-heading">
+        <h2><strong>Marvel Movie </strong></h2>
+    </div>
+
+    <section id="movie-list">
+
+        <!-- box-1   -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post1" src="Marvel-thumbnails/mm-1.png">
+                <script>$("#post1").click(function () { window.location.href = 'marvel-post/post1.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="marvel-post/post1.html">Secret Invasion (2023) Season 1 [Episode 1-6 Complete] Dual Audio
+                [ORGHindi-English] WEB-DL
+            </a>
+        </div> 
+        <!-- box-2 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post2" src="Marvel-thumbnails/mm-2.png" alt="#">
+                <script>$("#post2").click(function () { window.location.href = 'marvel-post/post2.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="marvel-post/post2.html">Guardians of the Galaxy Volume 3 (2023) – Dual Audio [Hindi +
+                English] 480p | 720p | 1080p | 2160p 4k HDR</a>
+        </div>
+        <!-- box-3 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post3" src="Marvel-thumbnails/mm-3.png" alt="#">
+                <script>$("#post3").click(function () { window.location.href = 'marvel-post/post3.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="marvel-post/post3.html">Guardians of the Galaxy Volume 3 (2023) – Dual Audio [Hindi +
+                English] 480p | 720p | 1080p | 2160p 4k HDR</a>
+        </div>
+        <!-- box-4 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post4" src="Marvel-thumbnails/mm-4.png" alt="#">
+                <script>$("#post4").click(function () { window.location.href = 'marvel-post/post4.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="marvel-post/post4.html">Guardians of the Galaxy Volume 3 (2023) – Dual Audio [Hindi +
+                English] 480p | 720p | 1080p | 2160p 4k HDR</a>
+        </div>
+        <!-- box-5 -->
+        <div class="movie-box">
+            <!-- img -->
+            <div class="movie-img">
+                <img id="post5" src="Marvel-thumbnails/mm-.png" alt="#">
+                <script>$("#post5").click(function () { window.location.href = 'marvel-post/post.html' });</script>
+            </div>
+            <!-- text -->
+            <a id="txt" href="marvel-post/post.html">Guardians of the Galaxy Volume 3 (2023) – Dual Audio [Hindi +
+                English] 480p | 720p | 1080p | 2160p 4k HDR</a>
+        </div>
+    </section>
+
+    <div class="btns">
+        <a href="#">Previous</a>
+        <a href="#">Next</a>
+    </div>
+
+    <footer>
+        <p>Copyright © 2023, All Reserved | ❤️ TheOne for Marval lover</p>
+    </footer>
+
+    <!-- slider script -->
+    <script>
+        $(document).ready(function () {
+            $('#autoWidth,#autoWidth2').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth,#autoWidth2').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
