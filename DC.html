@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/hollywood.css">
+    <link rel="stylesheet" href="css/marvel.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/lightslider.css">
     <script src="js/JQuery3.3.1.js"></script>
@@ -16,55 +16,25 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Sen:wght@400;700;800&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <title>Hollywood Section (page-1)</title>
+    <title>MCU Section (page-1)</title>
     <style>
         li {
             text-decoration: none;
             list-style-type: none;
         }
 
-        #bulk {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
+        #img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
         }
 
-        .btn {
-            margin: 5px 5px;
-            font-weight: 600;
-            width: 120px;
-            height: 40px;
-            border-radius: 5px;
-            border: none;
-            outline: none;
-            color: #fff;
-            background-color: #171c24;
-            font-size: 12px;
-            align-items: center;
-            text-align: center;
-        }
-
-        .btn a {
-            align-items: center;
-            text-align: center;
-            font-weight: 600;
-            color: #fff;
-            font-size: 12px;
-        }
-
-        .btn a:hover {
-            color: #ff3d00;
-        }
-
-        .btn li a:hover {
-            color: #ff3d00;
-        }
-
-        .btn li:hover {
-            transform: scale(1);
-            transition: 0.3s;
+        @media (max-width: 768px) {
+            #img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
@@ -82,8 +52,8 @@
             The<span>One</span>
         </div>
         <div class="nav-items">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#">Web Seres</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Web Series</a></li>
             <li><a href="Anime1.html">Anime</a></li>
             <li><a href="#">Netflix</a></li>
             <li><a href="#">Request us🖤</a></li>
@@ -145,53 +115,18 @@
     <!-- navbar End -->
 
 
-    <!-- <p style="text-align: center;margin-top: 10px;"> -->
-    <div id="bulk">
-        <button class="btn">
-            <li><a href="#">Anime Movie</a></li>
-        </button>
-
-        <button class="btn">
-            <li><a href="marvel.html">Marvel Collection</a></li>
-        </button>
-        <button class="btn">
-            <li><a href="#">DC Collection</a></li>
-        </button>
-        <button class="btn">
-            <li><a href="#">Movies Collection</a></li>
-        </button>
-        <button class="btn">
-            <li><a href="#">Disney +</a></li>
-        </button>
-    </div>
-    <!-- </p> -->
-
-    <!-- <section id="latest" style="padding: 10px 0px 0px 0px;">
-        <h2 class="latest-heading" style="margin:10px 20px 20px 20px;"><strong>Latest Movies</strong></h2>
-        
-        <ul id="autoWidth2" class="cs-hidden" style="text-decoration: none;">
-            
-            <li class="item-a">
-                <div class="latest-box">
-                    
-                    <div class="latest-b-img">
-                        <img src="Movie-thumbnails/MP-1.jpg" alt="">
-                    </div>
-                    
-                    <div class="latest-b-text">
-                        <strong></strong>
-                        <p>Movie</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </section> -->
+    <p style="text-align: center;margin-top: 0px;">
+        <img id="img" src="dc-banner.png" alt="">
+    </p>
 
     <!-- movie section -->
 
     <div class="movie-heading">
-        <h2><strong>Movie</strong></h2>
+        <h2><strong>Marvel Movie </strong></h2>
     </div>
+    <p
+        style="align-items: center;display: flex; justify-content: center; margin: 5px 10px; font-size: 12px; font-weight: 700;">
+        post</p>
 
     <section id="movie-list">
 
@@ -199,170 +134,152 @@
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post1" src="Movie-thumbnails/M-1.jpg">
-                <script>$("#post1").click(function () { window.location.href = 'movie-post/post1.html' });</script>
+                <img id="post1" src="">
+                <script>$("#post1").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="movie-post/post1.html">Inception (2014) Dual Audio {Hindi-English} 480p | 720p | 1080p</a>
+            <a id="txt" href=""></a>
         </div>
-
-        <!-- box-2   -->
+        <!-- box-2 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post2" src="Movie-thumbnails/M-2.png" alt="#">
-                <script>$("#post2").click(function () { window.location.href = 'movie-post/post2.html' });</script>
+                <img id="post2" src="" alt="#">
+                <script>$("#post2").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="movie-post/post2.html">Interstellar (2014) Dual Audio {Hindi-English} 480p | 720p |
-                1080p</a>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-3 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post3" src="Movie-thumbnails/M-3.png" alt="#">
-                <script>$("#post3").click(function () { window.location.href = 'movie-post/post3.html' });</script>
+                <img id="post3" src="" alt="#">
+                <script>$("#post3").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="movie-post/post3.html">Download Top Gun: Maverick (2022) iMAX BluRay Dual Audio
-                {Hindi-English} 480p | 720p | 1080p | 2160p 4K</a>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-4 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post4" src="#" alt="#">
+                <img id="post4" src="" alt="#">
+                <script>$("#post4").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post4").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-5 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post5" src="#" alt="#">
+                <img id="post5" src="" alt="#">
+                <script>$("#post5").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post5").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
-        <!-- box-6 -->
+        <!-- box-6   -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post6" src="#" alt="#">
+                <img id="post6" src="">
+                <script>$("#post6").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post6").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-7 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post7" src="#" alt="#">
+                <img id="post7" src="" alt="#">
+                <script>$("#post7").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post7").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-8 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post8" src="#" alt="#">
+                <img id="post8" src="" alt="#">
+                <script>$("#post8").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post8").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-9 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post9" src="#" alt="#">
+                <img id="post9" src="" alt="#">
+                <script>$("#post9").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post9").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-10 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post10" src="#" alt="#">
+                <img id="post10" src="" alt="#">
+                <script>$("#post10").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post10").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
-        <!-- box-11 -->
+        <!-- box-11   -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post11" src="#" alt="#">
+                <img id="post11" src="">
+                <script>$("#post11").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post11").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-12 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post12" src="#" alt="#">
+                <img id="post12" src="" alt="#">
+                <script>$("#post12").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post12").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-13 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post13" src="#" alt="#">
+                <img id="post13" src="" alt="#">
+                <script>$("#post13").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post13").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-14 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post14" src="#" alt="#">
+                <img id="post14" src="" alt="#">
+                <script>$("#post14").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post14").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
         <!-- box-15 -->
         <div class="movie-box">
             <!-- img -->
             <div class="movie-img">
-                <img id="post15" src="#" alt="#">
+                <img id="post15" src="" alt="#">
+                <script>$("#post15").click(function () { window.location.href = '' });</script>
             </div>
             <!-- text -->
-            <a id="txt" href="#"></a>
-            <script>$("#post15").click(function () { window.location.href = '' });</script>
+            <a id="txt" href=""></a>
         </div>
-
-
     </section>
 
     <div class="btns">
@@ -371,7 +288,7 @@
     </div>
 
     <footer>
-        <p>Copyright © 2023, All Reserved | ❤️ TheOne for Movie lover</p>
+        <p>Copyright © 2023, All Reserved | ❤️ TheOne for Marval lover</p>
     </footer>
 
     <!-- slider script -->

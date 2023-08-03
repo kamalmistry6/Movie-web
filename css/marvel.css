@@ -149,9 +149,9 @@ a {
   font-weight: 600;
   font-size: 13px;
   display: -webkit-box;
-  max-width: 80%;
+  max-width: 85%;
   height: 90px;
-  text-align: justify;
+  /* text-align: justify; */
   -webkit-line-clamp: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
